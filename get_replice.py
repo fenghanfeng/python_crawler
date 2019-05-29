@@ -7,10 +7,10 @@ res = requests.get('http://www.xiachufang.com/explore/')
 # 获取数据
 res = res.text
 # 转换为字符串格式
-res_food = BeautifulSoup(res,'html.parser')
+res_foods = BeautifulSoup(res,'html.parser')
 # 解析数据
 
-foods_all = res_food.find_all('div',class_='info pure-u')
+foods_all = res_foods.find_all('div',class_='info pure-u')
 # 查找最小父级标签
 
 foods_list = []
