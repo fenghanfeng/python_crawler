@@ -21,12 +21,14 @@ for food_all in foods_all:
 
     food_name = food_all.find('p',class_='name').text[17:-13]
     # 菜名，使用[17:-13]切掉了多余的信息
+    print(food_name)
 
     food_url = 'http://www.xiachufang.com/explore/'+ food_all.find('a')['href']
     # 获取URL
 
-    food_Ingred = food_all.find('p',class_='ing ellipsis').text[1:-1]
+    food_Ingred = food_all.find('p',class_='ing ellipsis').text[1,-1]
     # 食材，使用[1:-1]切掉了多余的信息
+    # print(food_Ingred)
 
     food_list = [food_name,food_url,food_Ingred]
 
