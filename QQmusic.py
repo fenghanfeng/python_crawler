@@ -1,5 +1,17 @@
-import requests
+import requests,openpyxl
 # 引用requests模块
+wb = openpyxl.Workbook()
+
+sheet = wb.active
+
+sheet.title = 'new title'
+
+sheet['A1'] = '歌曲名'
+sheet['B1'] ='所属专辑'
+sheet['C1'] ='播放时长'
+sheet['D1'] ='播放链接'
+
+
 url = 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp'
 for x in range(5):
     
@@ -46,3 +58,6 @@ for x in range(5):
         # 查找播放时长
         print('播放链接：https://y.qq.com/n/yqq/song/'+music['mid']+'.html\n\n')
         # 查找播放链接
+        sheet.append([music['name'],music['album']['name'],str(music['interval'])+'秒','https://y.qq.com/n/yqq/song/'+music['mid']+'.html'])
+
+wb.save('Jay.xlsx')
