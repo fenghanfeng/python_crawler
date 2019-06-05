@@ -1,1 +1,1 @@
-python�ʼ�����
+使用python实现邮件发送
