@@ -1,1 +1,1 @@
-ʹ��python���ж�ά������
+python：通过python进行二维码制作
