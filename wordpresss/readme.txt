@@ -1,1 +1,1 @@
-python��wordpress��վ���۷���
+python实现d对wordpress网站文章进行评论
